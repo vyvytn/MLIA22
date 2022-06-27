@@ -40,7 +40,7 @@ def evaluate_linear_sum_assignment(gt_labels, pred_labels):
     logger.debug("overlay shape relabeled %s", overlay.shape)
     # get overlaying cells and the size of the overlap
     overlay_labels, overlay_labels_counts = np.unique(
-        overlay, return_counts=True, axis=1)
+        overlay, return_counts=True, axis=1) # TODO Was 1
     overlay_labels = np.transpose(overlay_labels)
 
     # get gt cell ids and the size of the corresponding cell
